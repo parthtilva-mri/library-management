@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShelfWise Library | Books</title>
+    <link rel="stylesheet" href="../assets/styles/main.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <h2 class="brand">ShelfWise</h2>
+        <p class="brand-sub">Library Management</p>
+        <nav class="nav-links">
+          <a href="./dashboard.html" class="nav-link" data-nav-link="dashboard">Dashboard</a>
+          <a href="./books.html" class="nav-link" data-nav-link="books">Books</a>
+          <a href="./members.html" class="nav-link" data-nav-link="members">Members</a>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="user-chip">Logged in: <strong data-user-greeting></strong></div>
+          <button class="logout-btn" data-logout-btn>Logout</button>
+        </div>
+      </aside>
+
+      <main class="main">
+        <section class="hero fade-in">
+          <h1>Books Catalog</h1>
+          <p>Add and monitor titles available in your college library.</p>
+        </section>
+
+        <section class="section-panel">
+          <h3 class="section-title">Add New Book</h3>
+          <form id="book-form" class="form-grid">
+            <div class="field">
+              <label for="title">Title</label>
+              <input id="title" name="title" required />
+            </div>
+            <div class="field">
+              <label for="author">Author</label>
+              <input id="author" name="author" required />
+            </div>
+            <div class="field">
+              <label for="category">Category</label>
+              <input id="category" name="category" required />
+            </div>
+            <div class="field">
+              <label for="totalCopies">Total Copies</label>
+              <input id="totalCopies" name="totalCopies" type="number" min="1" value="1" required />
+            </div>
+            <div class="field" style="align-self: end">
+              <button type="submit" class="primary-btn">Add Book</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="section-panel">
+          <h3 class="section-title">Book Records</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Category</th>
+                  <th>Availability</th>
+                </tr>
+              </thead>
+              <tbody id="books-table-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="../assets/scripts/books.js"></script>
+  </body>
+</html>

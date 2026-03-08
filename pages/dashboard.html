@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShelfWise Library | Dashboard</title>
+    <link rel="stylesheet" href="../assets/styles/main.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <h2 class="brand">ShelfWise</h2>
+        <p class="brand-sub">Library Management</p>
+        <nav class="nav-links">
+          <a href="./dashboard.html" class="nav-link" data-nav-link="dashboard">Dashboard</a>
+          <a href="./books.html" class="nav-link" data-nav-link="books">Books</a>
+          <a href="./members.html" class="nav-link" data-nav-link="members">Members</a>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="user-chip">Logged in: <strong data-user-greeting></strong></div>
+          <button class="logout-btn" data-logout-btn>Logout</button>
+        </div>
+      </aside>
+
+      <main class="main">
+        <section class="hero fade-in">
+          <h1>Dashboard Overview</h1>
+          <p>Track catalog health, members, and issue activity in one place.</p>
+        </section>
+
+        <section class="grid-cards">
+          <article class="card fade-in fade-delay-1">
+            <p class="card-title">Total Books</p>
+            <p class="card-value" id="stat-total-books">0</p>
+          </article>
+          <article class="card fade-in fade-delay-1">
+            <p class="card-title">Total Members</p>
+            <p class="card-value" id="stat-total-members">0</p>
+          </article>
+          <article class="card fade-in fade-delay-2">
+            <p class="card-title">Books Available</p>
+            <p class="card-value" id="stat-books-available">0</p>
+          </article>
+          <article class="card fade-in fade-delay-2">
+            <p class="card-title">Active Loans</p>
+            <p class="card-value" id="stat-active-loans">0</p>
+          </article>
+          <article class="card fade-in fade-delay-3">
+            <p class="card-title">Overdue Loans</p>
+            <p class="card-value" id="stat-overdue">0</p>
+          </article>
+          <article class="card fade-in fade-delay-3">
+            <p class="card-title">All Loans</p>
+            <p class="card-value" id="all-loans-count">0</p>
+          </article>
+        </section>
+
+        <section class="section-panel">
+          <h3 class="section-title">Recent Loan Activity</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Book</th>
+                  <th>Member</th>
+                  <th>Issue Date</th>
+                  <th>Due Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="recent-loans-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="../assets/scripts/dashboard.js"></script>
+  </body>
+</html>

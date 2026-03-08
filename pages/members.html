@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShelfWise Library | Members</title>
+    <link rel="stylesheet" href="../assets/styles/main.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <h2 class="brand">ShelfWise</h2>
+        <p class="brand-sub">Library Management</p>
+        <nav class="nav-links">
+          <a href="./dashboard.html" class="nav-link" data-nav-link="dashboard">Dashboard</a>
+          <a href="./books.html" class="nav-link" data-nav-link="books">Books</a>
+          <a href="./members.html" class="nav-link" data-nav-link="members">Members</a>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="user-chip">Logged in: <strong data-user-greeting></strong></div>
+          <button class="logout-btn" data-logout-btn>Logout</button>
+        </div>
+      </aside>
+
+      <main class="main">
+        <section class="hero fade-in">
+          <h1>Members Directory</h1>
+          <p>Maintain student memberships and view borrowing load.</p>
+        </section>
+
+        <section class="section-panel">
+          <h3 class="section-title">Register New Member</h3>
+          <form id="member-form" class="form-grid">
+            <div class="field">
+              <label for="name">Full Name</label>
+              <input id="name" name="name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+            <div class="field">
+              <label for="department">Department</label>
+              <input id="department" name="department" required />
+            </div>
+            <div class="field" style="align-self: end">
+              <button type="submit" class="primary-btn">Add Member</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="section-panel">
+          <h3 class="section-title">Member Records</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Department</th>
+                  <th>Active Loans</th>
+                </tr>
+              </thead>
+              <tbody id="members-table-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="../assets/scripts/members.js"></script>
+  </body>
+</html>
