@@ -56,16 +56,40 @@
         </section>
 
         <section class="section-panel">
+          <h3 class="section-title">Issue Book To Member</h3>
+          <form id="issue-form" class="form-grid">
+            <div class="field">
+              <label for="issue-book">Select Book</label>
+              <select id="issue-book" name="bookId" required></select>
+            </div>
+            <div class="field">
+              <label for="issue-member">Select Member</label>
+              <select id="issue-member" name="memberId" required></select>
+            </div>
+            <div class="field">
+              <label for="issue-due-date">Due Date</label>
+              <input id="issue-due-date" name="dueDate" type="date" required />
+            </div>
+            <div class="field" style="align-self: end">
+              <button type="submit" class="primary-btn">Issue Book</button>
+            </div>
+          </form>
+          <p id="issue-message" class="info-msg"></p>
+        </section>
+
+        <section class="section-panel">
           <h3 class="section-title">Recent Loan Activity</h3>
           <div class="table-wrap">
             <table>
               <thead>
                 <tr>
+                  <th>Loan ID</th>
                   <th>Book</th>
                   <th>Member</th>
                   <th>Issue Date</th>
                   <th>Due Date</th>
                   <th>Status</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody id="recent-loans-body"></tbody>

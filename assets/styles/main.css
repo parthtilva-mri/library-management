@@ -212,6 +212,11 @@ th {
   background: rgba(185, 28, 28, 0.12);
 }
 
+.status.returned {
+  color: #475569;
+  background: rgba(71, 85, 105, 0.13);
+}
+
 .form-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
@@ -229,18 +234,21 @@ label {
 }
 
 input,
+select,
 button {
   font: inherit;
 }
 
-input {
+input,
+select {
   border: 1px solid #dacdb7;
   border-radius: 10px;
   padding: 10px 11px;
   background: #fffdf8;
 }
 
-input:focus {
+input:focus,
+select:focus {
   outline: 3px solid var(--ring);
   border-color: var(--brand);
 }
@@ -253,6 +261,28 @@ input:focus {
   padding: 10px 16px;
   cursor: pointer;
   font-weight: 600;
+}
+
+.secondary-btn {
+  border: 1px solid #cdbfa6;
+  border-radius: 9px;
+  background: #fff8ec;
+  color: #5b4123;
+  padding: 7px 10px;
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.secondary-btn:hover {
+  background: #f8ecd7;
+}
+
+.info-msg {
+  min-height: 20px;
+  margin: 10px 2px 0;
+  color: var(--brand-deep);
+  font-size: 0.9rem;
 }
 
 /* Login */
