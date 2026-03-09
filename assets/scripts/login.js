@@ -21,7 +21,7 @@ form.addEventListener("submit", async (event) => {
 
   const user = await login(username, password);
   if (!user) {
-    errorBox.textContent = "Invalid credentials. Try admin / admin123.";
+    errorBox.textContent = "Invalid credentials. Try admin User";
     return;
   }
 
